@@ -26,6 +26,7 @@ export default function OAuth() {
         }),
       });
       const data = await res.json()
+      console.log("Backend response:", data);
       dispatch(signInSuccess(data))
       navigate('/')
     } catch (error) {
